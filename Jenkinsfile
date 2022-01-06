@@ -23,5 +23,15 @@ fi'''
       }
     }
 
+    stage('stage 3') {
+      steps {
+        sh '''For i in `cat etc/pwd/user`
+Do
+Ls -il $i
+done
+'''
+      }
+    }
+
   }
 }
