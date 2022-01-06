@@ -20,14 +20,20 @@ fi'''
           }
         }
 
+        stage('stage1.3') {
+          steps {
+            sh 'find /home/formation -user formation > /tmp/orsys'
+          }
+        }
+
       }
     }
 
     stage('stage 3') {
       steps {
-        sh '''For i in `cat etc/pwd/user`
-Do
-Ls -il $i
+        sh '''for i in `cat /tmp/orsys`
+do
+ls -il $i
 done
 '''
       }
