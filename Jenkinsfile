@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('stage 1') {
       steps {
-        sh 'sh " mkdir F1 "'
+        sh 'mkdir F1'
       }
     }
 
